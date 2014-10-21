@@ -1,0 +1,236 @@
+
+ /*---------------------------------Login CSS Format Start----------------------------------*/
+
+        .login p {
+            margin: 10px 10px 10px;
+        }
+        label {
+            float: left;
+            width: 100px;
+            line - height: 40px;
+            font - weight: 100;
+            text - align: right;
+        }
+        .center {
+            margin: auto;
+            width: 50px;
+            background-color: #b0e0e6;
+        }
+
+/*-----------------------------------Login CSS Format End-------------------------------------*/
+
+/* ---------------------------------  HOME Page CSS Starts --------------------------------- */
+#Lnt_headerMenu   {
+   border: 0px #C0C0C0 solid;
+   background-color: transparent;
+   }
+   #Lnt_headerMenu ul
+   {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   position: relative;
+   display: inline-block;
+   }
+   #Lnt_headerMenu li
+   {
+   float: left;
+   margin: 0;
+   padding: 0px 0px 0px 0px;
+   }
+   #Lnt_headerMenu a
+   {
+   display: block;
+   float: left;
+   color: #FFFFFF;
+   border: 0px #376BAD solid;
+   background-color: #006EDC;
+   background: -moz-linear-gradient(top,#006EDC 0%,#006EDC 100%);
+   background: -webkit-linear-gradient(top,#006EDC 0%,#006EDC 100%);
+   background: -o-linear-gradient(top,#006EDC 0%,#006EDC 100%);
+   background: -ms-linear-gradient(top,#006EDC 0%,#006EDC 100%);
+   background: linear-gradient(top,#006EDC 0%,#006EDC 100%);
+   font-family: "Trebuchet MS";
+   font-size: 13px;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   height: 30px;
+   line-height: 30px;
+   padding: 0px 15px 0px 15px;
+   vertical-align: middle;
+   text-align: center;
+   }
+   #Lnt_headerMenu li:hover a, #Lnt_headerMenu a:hover
+   {
+   color: #696969;
+   background-color: #85C2FF;
+   background: -moz-linear-gradient(top,#85cfff 0%,#C0C0C0 100%);
+   background: -webkit-linear-gradient(top,#85cfff 0%,#C0C0C0 100%);
+   background: -o-linear-gradient(top,#85cfff 0%,#C0C0C0 100%);
+   background: -ms-linear-gradient(top,#85cfff 0%,#C0C0C0 100%);
+   background: linear-gradient(top,#85cfff 0%,#C0C0C0 100%);
+   border: 0px #376BAD solid;
+   }
+   #Lnt_headerMenu li.firstmain
+   {
+   padding-left: 0px;
+   }
+   #Lnt_headerMenu li.lastmain
+   {
+   padding-right: 0px;
+   }
+   #Lnt_headerMenu br
+   {
+   clear: both;
+   font-size: 1px;
+   height: 0;
+   line-height: 0px;
+   }
+ 
+/* ---------------------------------  HOME Page CSS End --------------------------------- */
+
+ .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border-color: #aabcfe;
+        }
+        .tg td {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+            border-color: #aabcfe;
+            color: #669;
+            background-color: #e8edff;
+        }
+        .tg th {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+            border-color: #aabcfe;
+            color: #039;
+            background-color: #b9c9fe;
+        }
+        .tg .tg-0ord {
+            text-align: right
+        }
+        .tg .tg-ifyx {
+            background-color: #D2E4FC;
+            text-align: right
+        }
+        .tg .tg-s6z2 {
+            text-align: center
+        }
+        .tg .tg-vn4c {
+            background-color: #D2E4FC
+        }
+        .paginate {
+            cursor: pointer;
+            border-style: solid;
+            border-width: 1px;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            text-align: center;
+            background-color: #F1F1F1;
+        }
+        .paginate:hover {
+            background-color: black;
+            color: white;
+        }
+.tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+                border-color: #aabcfe;
+            }
+            .tg td {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                padding: 10px 5px;
+                border-style: solid;
+                border-width: 1px;
+                overflow: hidden;
+                word-break: normal;
+                border-color: #aabcfe;
+                color: #669;
+                background-color: #e8edff;
+            }
+            .tg th {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                padding: 10px 5px;
+                border-style: solid;
+                border-width: 1px;
+                overflow: hidden;
+                word-break: normal;
+                border-color: #aabcfe;
+                color: #039;
+                
+            }
+            .tg .tg-0ord {
+                text-align: right
+            }
+            .tg .tg-ifyx {
+                background-color: #D2E4FC;
+                text-align: right
+            }
+            .tg .tg-s6z2 {
+                text-align: center
+            }
+            .tg .tg-vn4c {
+                background-color: #D2E4FC
+            }
+	     .tg .colum {
+                background-color: #1F5C99;color:white;
+	
+            }
+	      .tg .header {
+		 background-color: #00317A;color:white;
+                
+	
+            }
+            .paginate {
+                cursor: pointer;
+                border-style: solid;
+                border-width: 1px;
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                text-align: center;
+                background-color: #F1F1F1;
+            }
+            .paginate:hover {
+                background-color: black;
+                color: white;
+            }
+		 tr:hover {  background-color: black;
+                color: white; }
+
+
+.registercla
+         {
+         position:absolute;
+         left:100px;
+         top:200px;
+         border:1px solid;
+         padding:5px;
+         background-color:#CEE7FF;
+	height:500px;
+         }
+.registercla label{
+            float: left;
+            width: 200px;
+            line - height: 40px;
+            font - weight: 100;
+            text - align: right;
+        }

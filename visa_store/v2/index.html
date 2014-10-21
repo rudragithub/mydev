@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <script type='text/javascript' src='js/login.js'></script>   
+      <script type='text/javascript' src='js/visa.js'></script> 
+      <script type='text/javascript' src='js/registration.js'></script>   
+   <body oncontextmenu="return false" style="margin:0px;padding:0px;">
+      <div id='logo' style='top:20px;position:relative;left: 10px;'>
+         <img width="94" height="50" id="LogoDiv_Image" src="logo.jpg">
+      </div>
+      <!-- login from submit started -->
+      <div id="LnT_login">
+         <div style='height:20px;background-color:#006EDC;padding-top:5px;padding-left:5px;color:white;margin:0px;'>Login</div>
+         <form method="post" name="loginform" action="" class="login" onSubmit="JavaScript:loadMenus()">
+            <p>
+               <label for="login">User Name</label>
+               <input type="text" name="username" placeholder="ps number" value="">
+            </p>
+            <p>
+               <label for="password">Password</label>
+               <input name="password" type="password" id="password" placeholder="password" value="">
+            </p>
+            <div class='center'>
+               <input type="submit" value="Log in">
+            </div>
+            <p style='top:135px;left:10px;position:absolute;width:150px;'><a style='text-decoration: none;color:blue;' href="#20">Register </a>
+            </p>
+            <p style='top:135px;left:168px;position:absolute;width:150px;'><a style='text-decoration: none;color:blue;' href="#27">Forgot Password ? </a>
+            </p>
+         </form>
+      </div>
+      <!-- login from submit ended -->
+      <!-- Menu pages -->
+      <div  id="Lnt_headerMenu" style="left: 10px; top: 30px; width: 704px; height: 32px; position: relative; z-index: 2;visibility:hidden;">
+         <ul>
+            <li onclick='showTable()'><a href="#" target="_self">VISA Details</a></li>
+            <li onclick="registration()"><a href="#" target="_self">New Registration</a></li>
+         </ul>
+      </div>
+      <!-- Menu pages end -->
+      <div style='position:absolute;left:10px;top:196px;' id='visaTable'></div>
+      <div  id='LnT_Registration'></div>
+   </body>
+</html>

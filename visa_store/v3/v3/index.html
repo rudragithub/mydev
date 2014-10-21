@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+      <script type='text/javascript' src='js/login.js'></script>   
+      <script type='text/javascript' src='js/visa.js'></script> 
+      <script type='text/javascript' src='js/registration.js'></script>   
+   <body oncontextmenu="return false" style="margin:0px;padding:0px;">
+      <div id='logo' style='top:20px;position:relative;left: 10px;'>
+         <img width="94" height="50" id="LogoDiv_Image" src="logo.jpg">
+      </div>
+   <!-- Menu pages -->
+      <div  id="Lnt_headerMenu" style="left: 10px; top: 30px; width: 704px; height: 32px; position: relative; z-index: 2;visibility:hidden;">
+         <ul>
+            <li onclick='showTable()'><a href="#" target="_self">VISA Details</a></li>
+            <li onclick="registration()"><a href="#" target="_self">New Registration</a></li>
+            <li onclick="registration()"><a href="#" target="_top">LogOff</a></li>
+         </ul>
+      </div>
+      <!-- Menu pages end -->
+      <div style='position:absolute;left:10px;top:196px;' id='visaTable'></div>
+      <div  id='LnT_Registration'></div>
+
+      <!-- login from submit started -->
+      <div id="LnT_login" style='background-color:#CEE7FF'>
+         <div style='height:20px;background-color:#006EDC;padding-top:5px;padding-left:5px;color:white;margin:0px;'>Login</div>
+         <form method="post" name="loginform" action="" class="login" onSubmit="JavaScript:loadMenus()">
+            <p>
+               <label for="login">User Name</label>
+               <input type="text" name="username" placeholder="ps number" value="">
+            </p>
+            <p>
+               <label for="password">Password</label>
+               <input name="password" type="password" id="password" placeholder="password" value="">
+            </p>
+            <div class='center'>
+               <input type="submit" value="Log in">
+            </div>
+            <p style='top:135px;left:10px;position:absolute;width:150px;'><a onclick='shownewuserRegistration()' style='text-decoration: none;color:blue;' href="#20">Register </a>
+            </p>
+            <p style='top:135px;left:168px;position:absolute;width:150px;' ><a onclick='showForgotPwdScreen()' style='text-decoration: none;color:blue;' href="#27">Forgot Password ? </a>
+            </p>
+         </form>
+      </div>
+ <div id="LnT_Reset_pwd" class='lntresetpwd'>
+         <div style='height:20px;background-color:#006EDC;padding-top:5px;padding-left:5px;color:white;margin:0px;'>Reset password</div>
+         <form method="post" name="resetform" action="" class="lnt_resetpwd" onSubmit="JavaScript:loadMenus()">
+            <p>
+               <label for="reset">Enter New Password</label>
+               <input type="password" name="username" placeholder="" value="">
+            </p>
+            <p>
+               <label for="password">Re-Confirm Password</label>
+               <input name="password" type="password" id="password" placeholder="password" value="">
+            </p>
+             <div style='position:absolute;left:168px;'>
+               <button   name='forgotpwd' type="button" value="Submit" onclick="savePassword()">Submit</button>
+            </div>
+         </form>
+      </div>
+ <div id="LnT_ForgotPassword" class='lntforgotpwd' >
+         <div style='height:20px;background-color:#006EDC;padding-top:5px;padding-left:5px;color:white;margin:0px;'>Forgot Password</div>
+         <form method="post" name="forgotform" action="" class='forgot_password' >
+            <p>
+               <label for="forgot">User Name</label>
+               <input type="text" name="forgot_username" placeholder="ps number" value="">
+            </p>
+            <p>
+ <label for="forgot">Select your registered Questionaire</label>
+               <select name="forgot_pwd">
+<option value="volvo" selected>What is your childhood name?</option>
+<option value="hero">What is your childhood hero?</option>
+<option value="birth" >Where is your Birth Place </option>
+<option value="marriage">Enter your marriage date ?</option>
+<option value="food">What food do you like more ?</option>
+</select>
+<p>
+               <label for="forgot">Answer</label>
+               <input type="text" name="forgot_username" placeholder="" value="">
+            </p>
+            </p>
+            <div style='position:absolute;left:218px;'>
+               <button   name='forgotpwd' type="button" value="Submit" onclick="resetPassword()">Submit</button>
+            </div>
+           
+         </form>
+      </div>
+<div id="LnT_newuser_register" class='lntnewuserregis' >
+         <div style='height:20px;background-color:#006EDC;padding-top:5px;padding-left:5px;color:white;margin:0px;'>New User Registration</div>
+         <form method="post" name="forgotform" action="" class='lntnew_user_regis' >
+            <p>
+               <label for="newUserregis">User Name</label>
+               <input type="text" name="newuser_username" placeholder="" value="">
+            </p>
+	     <p>
+               <label for="newUserregis">Enter Password</label>
+               <input type="password" name="newuser_pass" placeholder="" value="">
+            </p>
+             <p>
+               <label for="newUserregis">RE-Enter Password</label>
+               <input type="password" name="newuser_confirmpwd" placeholder="" value="">
+            </p>
+            <p>
+ <label for="forgot">Select your favourite Questionaire</label>
+               <select name="new_user_regis">
+<option value="volvo" selected>What is your childhood name?</option>
+<option value="hero">What is your childhood hero?</option>
+<option value="birth" >Where is your Birth Place </option>
+<option value="marriage">Enter your marriage date ?</option>
+<option value="food">What food do you like more ?</option>
+</select>
+<p>
+               <label for="newUserregis">Answer</label>
+               <input type="text" name="newuser_username" placeholder="" value="">
+            </p>
+            </p>
+            <div style='position:absolute;left:218px;'>
+               <button   name='newuser_pass' type="button" value="Submit" onclick="newuserRegistration()">Submit</button>
+            </div>
+           
+         </form>
+      </div>
+      <!-- login from submit ended -->
+   
+   </body>
+</html>

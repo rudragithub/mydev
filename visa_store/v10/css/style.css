@@ -1,0 +1,450 @@
+
+/*  background area ------------------*/
+.lnt_bg
+{
+width:100%;
+height:100%;
+position:absolute;
+z-index:-1;
+}
+
+
+/*------------ logo area ----------------*/
+.logo
+{
+top:20px;
+position:relative;
+left: 10px;
+}
+
+
+
+/*------------ General for Forms ---------------------*/
+.dialogBar
+{
+height:20px;
+background-color:#006EDC;
+padding-top:5px;
+padding-left:5px;
+color:white;
+margin:0px;
+}
+.dialogBgColor
+{
+visibility:hidden;
+background-color:#CEE7FF;
+position:absolute;
+}
+
+.tdialogBgColor
+{
+top:150px;
+visibility:hidden;
+background-color:#CEE7FF;
+position:absolute;
+}
+ /*---------------------------------Login CSS Format Start----------------------------------*/
+
+.form_login p {
+margin: 10px 10px 10px;
+}
+
+.form_login label {
+float: left;
+width: 100px;
+line - height: 40px;
+font - weight: 100;
+text - align: right;
+}
+
+.login_register
+{
+top:135px;
+left:10px;
+position:absolute;
+width:150px;
+}
+
+.login_forgotpwd
+{
+top:135px;
+left:168px;
+position:absolute;
+width:150px;
+}
+
+.login_anchor
+{
+text-decoration: none !important;
+color:blue;
+}
+
+.form_login_submit
+{
+width:100px;
+left:120px;
+position:absolute;
+top:118px;
+}
+
+.dialogloginColor
+{
+
+background-color:#CEE7FF;
+position:absolute;
+}
+        
+
+/*-----------------------------------Form Reset Password-------------------------------------*/
+.form_resetpwd{ 
+background-color:#CEE7FF
+}
+
+.form_resetpwd p {
+            margin: 10px 10px 10px;
+        }
+        .forgot_password label{
+            float: left;
+            width: 300px;
+            line - height: 40px;
+            font - weight: 100;
+            text - align: right;
+	    background-color:#CEE7FF;
+            
+        }
+
+ .form_resetpwd label {
+            float: left;
+            width: 200px;
+            line - height: 40px;
+            font - weight: 100;
+            text - align: right;
+        }
+
+.form_resetpwd_submit
+{
+position:absolute;
+left:168px;
+}
+
+
+
+
+/*-----------------------------------Form Forgot Password-------------------------------------*/
+
+.form_forgotpwd p 
+{
+margin: 10px 10px 10px;
+}
+
+.form_forgotpwd label
+{
+float: left;
+width: 300px;
+line - height: 40px;
+font - weight: 100;
+text - align: right;
+background-color:#CEE7FF;
+}
+
+.forgot_submit
+{
+position:absolute;
+left:218px;
+}
+
+/*  ------------------- Form New user Registered for login -----------------------------*/
+
+
+.form_login_register p {
+            margin: 10px 10px 10px;
+        }
+        
+
+ .form_login_register label {
+            float: left;
+            width: 300px;
+            line - height: 40px;
+            font - weight: 100;
+            text - align: right;
+        }
+.login_newuser_form_submit
+{
+position:absolute;
+left:218px;
+}
+
+
+/*-------------- Menu bar -------------------*/
+.menu
+{
+left: 10px; 
+top: 30px; 
+width: 704px;
+height: 32px; 
+position: relative; 
+z-index: 2;
+visibility:hidden;
+}
+
+
+#Lnt_headerMenu   {
+   border: 0px #C0C0C0 solid;
+   background-color: transparent;
+   }
+   #Lnt_headerMenu ul
+   {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   position: relative;
+   display: inline-block;
+   }
+   #Lnt_headerMenu li
+   {
+   float: left;
+   margin: 0;
+   padding: 0px 0px 0px 0px;
+   }
+   #Lnt_headerMenu a
+   {
+   display: block;
+   float: left;
+   color: #FFFFFF;
+   border: 0px #376BAD solid;
+   background-color: #006EDC;
+   background: -moz-linear-gradient(top,#006EDC 0%,#006EDC 100%);
+   background: -webkit-linear-gradient(top,#006EDC 0%,#006EDC 100%);
+   background: -o-linear-gradient(top,#006EDC 0%,#006EDC 100%);
+   background: -ms-linear-gradient(top,#006EDC 0%,#006EDC 100%);
+   background: linear-gradient(top,#006EDC 0%,#006EDC 100%);
+   font-family: "Trebuchet MS";
+   font-size: 13px;
+   font-weight: normal;
+   font-style: normal;
+   text-decoration: none;
+   height: 30px;
+   line-height: 30px;
+   padding: 0px 15px 0px 15px;
+   vertical-align: middle;
+   text-align: center;
+   }
+   #Lnt_headerMenu li:hover a, #Lnt_headerMenu a:hover
+   {
+   color: #696969;
+   background-color: #85C2FF;
+   background: -moz-linear-gradient(top,#85cfff 0%,#C0C0C0 100%);
+   background: -webkit-linear-gradient(top,#85cfff 0%,#C0C0C0 100%);
+   background: -o-linear-gradient(top,#85cfff 0%,#C0C0C0 100%);
+   background: -ms-linear-gradient(top,#85cfff 0%,#C0C0C0 100%);
+   background: linear-gradient(top,#85cfff 0%,#C0C0C0 100%);
+   border: 0px #376BAD solid;
+   }
+   #Lnt_headerMenu li.firstmain
+   {
+   padding-left: 0px;
+   }
+   #Lnt_headerMenu li.lastmain
+   {
+   padding-right: 0px;
+   }
+   #Lnt_headerMenu br
+   {
+   clear: both;
+   font-size: 1px;
+   height: 0;
+   line-height: 0px;
+   }
+ 
+/* ---------------------------------  Table --------------------------------- */
+
+.visatable
+{
+position:absolute;
+left:10px;
+top:196px;
+}
+
+ .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border-color: #aabcfe;
+        }
+        .tg td {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+            border-color: #aabcfe;
+            color: #669;
+            background-color: #e8edff;
+        }
+        .tg th {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 10px 5px;
+            border-style: solid;
+            border-width: 1px;
+            overflow: hidden;
+            word-break: normal;
+            border-color: #aabcfe;
+            color: #039;
+            background-color: #b9c9fe;
+        }
+        .tg .tg-0ord {
+            text-align: right
+        }
+        .tg .tg-ifyx {
+            background-color: #D2E4FC;
+            text-align: right
+        }
+        .tg .tg-s6z2 {
+            text-align: center
+        }
+        .tg .tg-vn4c {
+            background-color: #D2E4FC
+        }
+        .paginate {
+            cursor: pointer;
+            border-style: solid;
+            border-width: 1px;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            text-align: center;
+            background-color: #F1F1F1;
+        }
+        .paginate:hover {
+            background-color: black;
+            color: white;
+        }
+.tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+                border-color: #aabcfe;
+            }
+            .tg td {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                padding: 10px 5px;
+                border-style: solid;
+                border-width: 1px;
+                overflow: hidden;
+                word-break: normal;
+                border-color: #aabcfe;
+                color: #669;
+                background-color: #e8edff;
+            }
+            .tg th {
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                padding: 10px 5px;
+                border-style: solid;
+                border-width: 1px;
+                overflow: hidden;
+                word-break: normal;
+                border-color: #aabcfe;
+                color: #039;
+                
+            }
+            .tg .tg-0ord {
+                text-align: right
+            }
+            .tg .tg-ifyx {
+                background-color: #D2E4FC;
+                text-align: right
+            }
+            .tg .tg-s6z2 {
+                text-align: center
+            }
+            .tg .tg-vn4c {
+                background-color: #D2E4FC
+            }
+	     .tg .colum {
+                background-color: #1F5C99;color:white;
+	
+            }
+	      .tg .header {
+		 background-color: #00317A;color:white;
+                
+	
+            }
+            .paginate {
+                cursor: pointer;
+                border-style: solid;
+                border-width: 1px;
+                width: 20px;
+                height: 20px;
+                display: inline-block;
+                text-align: center;
+                background-color: #F1F1F1;
+            }
+            .paginate:hover {
+                background-color: black;
+                color: white;
+            }
+		 tr:hover {  background-color: black;
+                color: white; }
+
+
+/* ------------------- New Registration Entry -------------------------*/
+.registercla
+         {
+         position:absolute;
+         left:100px;
+         top:148px;
+         border:1px solid;
+         padding:5px;
+         background-color:#CEE7FF;
+	     height:auto;
+         }
+.registercla label{
+            float: left;
+            width: 200px;
+            line - height: 20px;
+            font - weight: 100;
+            text - align: right;
+        }
+
+
+/*-------------------------- Browse ICON ------------------*/
+ .myfileupload-buttonbar input
+        {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            border: solid transparent;
+           width:30px;
+            opacity: 0.0;
+            filter: alpha(opacity=0);
+            -o-transform: translate(250px, -50px) scale(1);
+            -moz-transform: translate(-300px, 0) scale(4);
+            direction: ltr;
+            cursor: pointer;
+	    
+        }
+        .myui-button
+        {
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+            overflow: visible;
+            background-color:#039;
+	    color:white;
+            overflow: hidden;
+	  width:100px !important;
+         vertical-align:middle;
+         cursor: pointer;
+        }
+
+		
+.disbleBgColor
+{
+ background-color:#E3E3E3;
+}

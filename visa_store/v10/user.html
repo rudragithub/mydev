@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/style.css" />
+	  <script type='text/javascript' src='js/login.js'></script>
+	  <script type='text/javascript' src='js/menu.js'></script>
+	  <script type='text/javascript' src='js/visaentry.js'></script>
+      <script type='text/javascript' src='js/main.js'></script>
+	  	
+      <script type='text/javascript' src='js/update.js'></script>	  
+      <script type='text/javascript' src='js/validation.js'></script>	 
+      <script type='text/javascript' src='js/search.js'></script>	 
+   <body oncontextmenu="return false" style="margin:0px;padding:0px;font-family: Times New Roman, Georgia, Serif;size=11">
+      <!-- Logo starts -->
+      <div id='logo' class='logo'>
+         <img width="94" height="50" id="LogoDiv_Image" src="logo.jpg">
+      </div>
+      <!-- Logo End -->
+      <!-- Menu pages starts -->
+      <div  id="Lnt_headerMenu" class="menu">
+         <ul>
+            <li id='visaentry' onclick='menu.callVisaDetails()'><a href="#" target="_self">VISA Details</a></li>
+            <li  id= 'tab_visaRegister' onclick="menu.callVisaEntry()"><a href="#" target="_self">VISA Entry</a></li>
+            <li id= 'tab_update' onclick="menu.callUpdate()"><a href="#" target="_self">Update</a></li>
+            <li id= 'tab_newclient' onclick="menu.callNewClient()"><a href="#" target="_self">Add New Client</a></li>
+            <li onclick="menu.calllogoff()"><a href="#" target="_self">LogOff</a></li>
+         </ul>
+      </div>
+      <!-- Menu pages end -->
+      <!-- Visa Table -->
+      <div class='visatable' id='visaTable'></div>
+	  <!--- common area-->
+	  <div  style='z-index:10;position:absolute;'id='commonArea'></div>
+      <!-- Visa Entry Registration -->
+      <div  id='LnT_Registration'>
+         <div id='registerLnt' class='registercla'>
+            <div style='background-color:#006EDC;height:20px;line-height:20px;padding:-5px;margin:-5px;text-align:center;color:white;vertical-align:center;'>VISA Entry</div>
+            <form id='regForm' enctype='multipart/form-data' method='post' name='registerform' class='login' >
+			  <p><label >Name</label><input type='text' name='reg_uname' placeholder='' value='' size='35'></p>
+               <p><label >PS No</label><input type='text' name='reg_psno' size='35' placeholder='ps number' value=''></p> 
+				<p>
+                  <label >BU</label>
+                  <select id='reg_BU' name='reg_BU'> </select>
+               </p>
+			   <p>
+                  <label >Current DH</label>
+                  <select  id='reg_Current_DH' name='reg_Current_DH'> </select>
+               </p>
+			   <p>
+                  <label >Current PoC</label>
+                  <select id='reg_Current_PoC' name='reg_Current_PoC'></select>
+               </p>
+               <p>
+                  <label >Availability Status</label>
+                  <select name='reg_status'>
+                     <option></option>
+                     <option value='Available'>Available</option>
+                     <option value='Not Available'>Not Available</option>
+                  </select>
+               </p>
+              
+			    <p><label >Available by Date</label><input type='text' name='reg_available_day' style='width:25px;' placeholder='DD' value='' size='15' maxlength="2"><span> &nbsp/ &nbsp</span><input maxlength="2" style='width:25px;' type='text' name='reg_available_month' placeholder='MM' value='' size='15'><span> &nbsp/ &nbsp</span><input maxlength="4" type='text' name='reg_available_year' style='width:40px;'  placeholder='YYYY' value='' size='20'></p>
+				 <p><label >Primary Domain/ Skill</label><input type='text' name='reg_priDomain' placeholder='' value='' size='35'></p>
+				  <p><label >Detailed Skills</label><input onclick='visaEntryCreate.addTextArea()' type='button' name='reg_addSkills' placeholder='' value='Add' size='35' ></p>
+               <p><label >Selected for client</label><input type='text' name='reg_selected_client' placeholder='' value='' size='35'></p>
+			    <p><label >Onboardng Date</label><input maxlength="2" type='text' name='reg_board_day' style='width:25px;' placeholder='DD' value='' size='15'><span> &nbsp/ &nbsp</span><input maxlength="2" style='width:25px;' type='text' name='reg_board_month' placeholder='MM' value='' size='15'><span> &nbsp/ &nbsp</span><input maxlength="4" type='text' name='reg_board_year' style='width:40px;'  placeholder='YYYY' value='' size='20'></p>
+				
+				 <p>
+                  <label >PoC/ DH</label>
+                  <select id='reg_PoC_DH' name='reg_PoC_DH'> </select>
+               </p>  
+            
+              
+               <p style='position:relative;left:174px;'><input type='button' value='Submit' onclick="visaentry.save();"></p>
+            </form>
+         </div>
+      </div>
+      <!-- login Form starts -->
+      <div id="LnT_login" class='dialogloginColor' >
+         <div class='dialogBar'>Login</div>
+         <form method="post" name="loginform" class="form_login" enctype="multipart/form-data">
+            <p>
+               <label for="login">User Name</label>
+               <input type="text" name="login_uname" placeholder="ps number" value="">
+            </p>
+            <p>
+               <label for="password">Password</label>
+               <input name="login_pwd" type="password" id="pwd" placeholder="password" value="">
+            </p>
+            <p>
+               <input onchange="userLevel.getType();" name="admin_right" type="checkbox" id="admin_right" placeholder="" value="">Admin Rights
+            </p>
+            <div class='form_login_submit' >
+               <input type="button" value="Log in" onclick="loginValidate.validate('login.php',getQuery.login(),'login')">
+            </div>
+            <p class='login_register'><a onclick='newuserRegister.show()' class='login_anchor' href="#20">Register </a>
+            </p>
+            <p  class='login_forgotpwd'><a onclick='forgotPwd.show()' class='login_anchor' href="#27">Forgot Password ? </a>
+            </p>
+         </form>
+      </div>
+      <!-- login Form End-->
+      <!-- Reset Form starts -->
+      <div id="LnT_Reset_pwd" class='dialogBgColor'>
+         <div class='dialogBar'>Reset password</div>
+         <form method="post" name="resetform" action="" enctype="multipart/form-data" class="form_resetpwd " onSubmit="JavaScript:menu.load()">
+            <p>
+               <label for="reset">Enter New Password</label>
+               <input type="password" name="reset_pwd" placeholder="" value="">
+            </p>
+            <p>
+               <label for="password">Re-Confirm Password</label>
+               <input name="reset_confirm_pwd" type="password" id="password" placeholder="password" value="">
+            </p>
+            <div class='form_resetpwd_submit'>
+               <button   name='reset_submit' type="button" value="Submit" onclick="loginValidate.validate('login.php',getQuery.resetPwd(),'reset')">Submit</button>
+            </div>
+         </form>
+      </div>
+      <!-- Reset Form End-->
+      <!-- Forgot Password Form starts -->
+      <div id="LnT_ForgotPassword" class='dialogBgColor' >
+         <div class='dialogBar'>Forgot Password</div>
+         <form method="post" name="forgotform" action="" enctype="multipart/form-data" class='form_forgotpwd' >
+            <p>
+               <label for="forgot">User Name</label>
+               <input type="text" name="forgot_uname" placeholder="ps number" value="">
+            </p>
+            <p>
+               <label for="forgot">Select your registered Questionaire</label>
+               <select name="forgot_pwd">
+                  <option value="What is your childhood name?" selected>What is your childhood name?</option>
+                  <option value="What is your childhood hero?">What is your childhood hero?</option>
+                  <option value="Where is your Birth Place" >Where is your Birth Place </option>
+                  <option value="Enter your marriage date ?">Enter your marriage date ?</option>
+                  <option value="What food do you like more ?">What food do you like more ?</option>
+               </select>
+            <p>
+               <label for="forgot">Answer</label>
+               <input type="text" name="forgot_ans" placeholder="" value="">
+            </p>
+            <div class='forgot_submit'>
+               <button   name='forgot_submit' type="button" value="Submit" onclick="loginValidate.validate('login.php',getQuery.forgotPwd(),'forgot')">Submit</button>
+            </div>
+         </form>
+      </div>
+      <!-- Forgot Password Form End -->
+      <!-- New User Register Form starts -->
+      <div id="LnT_newuser_register" class='dialogBgColor' >
+         <div class='dialogBar'>New User Registration</div>
+         <form method="post" name="newuserRegform"  enctype="multipart/form-data" class='form_login_register' >
+            <p>
+               <label for="newUserregis">User Name</label>
+               <input type="text" name="newuser_uname" placeholder="" value="">
+            </p>
+            <p>
+               <label for="newUserregis">Enter Password</label>
+               <input type="password" name="newuser_pwd" placeholder="" value="">
+            </p>
+            <p>
+               <label for="newUserregis">RE-Enter Password</label>
+               <input type="password" name="newuser_confirm_pwd" placeholder="" value="">
+            </p>
+            <p>
+               <label for="newUserregis">Select your favourite Questionaire</label>
+               <select name="new_user_regis">
+                  <option value="What is your childhood name?" selected>What is your childhood name?</option>
+                  <option value="What is your childhood hero?">What is your childhood hero?</option>
+                  <option value="Where is your Birth Place" >Where is your Birth Place </option>
+                  <option value="Enter your marriage date ?">Enter your marriage date ?</option>
+                  <option value="What food do you like more ?">What food do you like more ?</option>
+               </select>
+            <p>
+               <label for="newUserregis">Answer</label>
+               <input type="text" name="newuser_ans" placeholder="" value="">
+            </p>
+            <div class='login_newuser_form_submit'>
+               <button   name='newuser_submit' type="button" value="Submit" onclick="loginValidate.validate('login.php',getQuery.register(),'register')">Submit</button>
+            </div>
+         </form>
+      </div>
+      <!-- New User Register Form End -->
+      <!-- search Page start -->
+      <div id='searchPage' class='registercla' style='visibility:hidden;'>
+         <div style='background-color:#006EDC;height:20px;line-height:20px;padding:-5px;margin:-5px;text-align:center;color:white;vertical-align:center;'>Update User Details </span></div>
+         <p><label >Enter PS No</label><input  id='reg_psno' style='width:100px;" type='text' name='reg_psno' size='35' placeholder='ps number' value=''><input id='searchbtn' type='button' value='Search' onclick="update.search();">&nbsp&nbsp<input type='button' id='search_modify' value='Modify' onclick="update.modify();" disabled></p>
+         <hr>
+         <form id='re_regForm' enctype='multipart/form-data' method='post' name='re_regForm' class='login' >
+             <p><label >Name</label><input type='text' name='reg_uname' placeholder='' value='' size='35'></p>               
+				<p>
+                  <label >BU</label>
+                  <select id='r_reg_BU' name='reg_BU'> </select>
+               </p>
+			   <p>
+                  <label >Current DH</label>
+                  <select  id='r_reg_Current_DH' name='reg_Current_DH'> </select>
+               </p>
+			   <p>
+                  <label >Current PoC</label>
+                  <select id='r_reg_Current_PoC' name='reg_Current_PoC'></select>
+               </p>
+               <p>
+                  <label >Availability Status</label>
+                  <select name='reg_status'>
+                     <option></option>
+                     <option value='Available'>Available</option>
+                     <option value='Not Available'>Not Available</option>
+                  </select>
+               </p>
+              
+			    <p><label >Available by Date</label><input type='text' name='reg_available_day' style='width:25px;' placeholder='DD' value='' size='15' maxlength="2"><span> &nbsp/ &nbsp</span><input maxlength="2" style='width:25px;' type='text' name='reg_available_month' placeholder='MM' value='' size='15'><span> &nbsp/ &nbsp</span><input maxlength="4" type='text' name='reg_available_year' style='width:40px;'  placeholder='YYYY' value='' size='20'></p>
+				 <p><label >Primary Domain/ Skill</label><input type='text' name='reg_priDomain' placeholder='' value='' size='35'></p>
+				  <p><label >Detailed Skills</label><input onclick='update.addTextArea()' type='button' name='reg_addSkills' placeholder='' value='View/Change' size='35' ></p>
+               <p><label >Selected for client</label><input type='text' name='reg_selected_client' placeholder='' value='' size='35'></p>
+			    <p><label >Onboardng Date</label><input maxlength="2" type='text' name='reg_board_day' style='width:25px;' placeholder='DD' value='' size='15'><span> &nbsp/ &nbsp</span><input maxlength="2" style='width:25px;' type='text' name='reg_board_month' placeholder='MM' value='' size='15'><span> &nbsp/ &nbsp</span><input maxlength="4" type='text' name='reg_board_year' style='width:40px;'  placeholder='YYYY' value='' size='20'></p>
+				
+				 <p>
+                  <label >PoC/ DH</label>
+                  <select id='r_reg_PoC_DH' name='reg_PoC_DH'> </select>
+               </p>
+            <p style='position:relative;'><label >Shared for Client</label>&nbsp&nbsp&nbsp&nbsp<input id='search_update' type='button' value='Update List' onclick='clientSelected()' disabled> </p>
+            <p style='position:relative;left:194px;'><input id='search_save' type='button' value='Save' onclick="update.save();" disabled> </p>
+         </form>
+      </div>
+      <!-- client selection -->
+      <div id="clientSelection" class='tdialogBgColor'  >
+         <div class='dialogBar' style='text-align:center;'>Shared Client </div>
+         <span><input style='position:absolute;right:0px;top:0px;'type='button' value='X' onclick='closeUpdateClient()' > 
+         <form method="post" name="clientUpdateForm"  enctype="multipart/form-data" class='form_login_register' >
+            <table id='clientAddtable' class='tg' style="width:100%">
+            </table>
+            </br>
+            <input  style="position:relative;margin-bottom:10px;left:300px;" id='search_client' type='button' value='Update' onclick='updateData();' >  
+            </br>
+         </form>
+      </div>
+      <!-- Background Area -->
+      <div id='popupbg' ></div>
+      <div class='lnt_bg'></div>
+   </body>
+</html>
